@@ -1,0 +1,276 @@
+<html>
+<head>
+	<title>Baby Yoda Demo</title>
+	
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	
+	<link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+	
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<script>
+	$(window).scroll(function(){
+		var scroll = $(window).scrollTop();
+		if(scroll < 1){
+			$('#navbar').css('background', 'transparent');
+			$('#navbar').removeClass('navbar-light');
+			$('#navbar').addClass('navbar-dark');
+			$('.navlink').removeClass('navlinkalt');
+			$('#navlogo').css('background-color', '#ffffff');
+		}else{
+			$('#navbar').css('background', '#ffffff');
+			$('#navbar').removeClass('navbar-dark');
+			$('#navbar').addClass('navbar-light');
+			$('.navlink').addClass('navlinkalt');
+			$('#navlogo').css('background-color', '#009C74');
+		}
+	});
+</script>
+
+
+	<!-- Navigation bar -->
+	<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+		<button class="navbar-toggler collapsed" type="button" onclick="$('.navlinks').toggle();">
+			<span class="navbar-toggler-icon "></span>
+		</button>
+
+		<div class="navbar-collapse collapse navlinks">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a href="#background" class="navlink">BACKGROUND</a>
+				</li>
+				<li class="nav-item">
+					<a href="#emotions" class="navlink">EMOTIONS</a>
+				</li>
+				<li class="nav-item">
+					<a href="#skills" class="navlink">SKILLS</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="w-100 text-center">
+			<a class="navbar-brand" href="/demo"><div  id="navlogo" ></div></a>
+		</div>
+		
+		<div class="navbar-collapse collapse navlinks">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a href="#friends" class="navlink">FRIENDS</a>
+				</li>
+				<li class="nav-item">
+					<a href="#foods" class="navlink">FOODS</a>
+				</li>
+				<li class="nav-item">
+					<a href="#contact" class="navbutton">CONTACT</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="topspacer d-md-none">
+		<div style="width: 100%; height: 100%; background-color: #000000"></div>
+	</div>
+	
+	<!-- Video and overlay -->
+	<video autoplay="autoplay" muted="muted" loop="loop" id="backgroundvideo">
+		<source src="video-background.mp4" type="video/mp4">
+	</video>
+	<div class="container" id="vidoverlay">
+		<div class="d-flex h-100 align-items-center">
+			<div class="text-white">
+				<div class="topspacer d-md-none"></div>
+				<h1 class="vidheadertext">CUTENESS <span class="vidboldheadertext" ><i>OVERLOAD</i></span></h1>
+				<p class="vidsubheadertext" >Who wants a regular old baby when you could have a baby Yoda to devote your life to? No one that's who.</p>
+				<br>
+				<a href="https://www.youtube.com/watch?v=QFzQuDn4SjE"><button type="button" class="greenbutton" >WATCH THE VIDEO</button></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Background -->
+	<div id="background">
+		<h1 class="headertext"><span class="greentext">HE</span> WHO IS</h1>
+		<div id="piccontainer">
+			<div id="leftpic"></div>
+			<div id="toprightpic"></div>
+			<div id="bottomrightpic"></div>
+		</div>
+		<div id="backgroundtext" class="d-flex align-items-center">
+			<div>
+				<h1>THE THEORIES</h1>
+				<p>Adorable baby Yoda is. Cute concept art baby Yoda has. The force baby Yoda can use. Baby Yoda who is? He come from where does? He even a he is? A lot of theories going around they are, some of our own thoughts collected did we. Gathered up all of the theories we have. Warned: they range from the reasonable to the be, uh... less reasonable. Hrmmm.</p>
+				<br>
+				<a href="#friends"><button type="button" class="whitebutton">MEET HIS FRIENDS</button></a>
+				<a href="https://www.cnet.com/news/who-or-what-is-baby-yoda-in-the-mandalorian-our-wildest-theories-so-far/" ><button type="button" class="greenbutton">READ MORE</button></a>
+			</div>
+		</div>
+		<div class="backgroundspacer d-xl-none"> </div>
+	</div>
+	
+	<!-- Emotions -->
+	<div id="emotions">
+		<h1 class="headertext headerspacer text-white">EMOTIONAL STATES</h1>
+		
+		<div id="emotioncarousel" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="emotionslide headerspacer">
+						<div class="emotiontitle text-white">SAD</div>
+						<div id="picsad" class="emotionpic" ></div>
+						<div class="emotiondesc">
+							<h1 class="greentext emotiondescsubtitle">WHY SO CRUEL? HMMM.</h1>
+							<p class="emotiondesctext">For baby Yoda 13/10 people would die. You see how sad he is? At those down-turned ears look! Baby Yoda needs a pick-me-up and a warm cup of frog leg soup.</p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="emotionslide headerspacer">
+						<div class="emotiontitle text-white">HAPPY</div>
+						<div id="pichappy" class="emotionpic" ></div>
+						<div class="emotiondesc">
+							<h1 class="greentext emotiondescsubtitle">WHEN HE SMILES WE SMILE</h1>
+							<p class="emotiondesctext">When baby Yoda is happy we love. At that smile look. The cutest alien thing ever he is. Our hearts he melts.</p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="emotionslide headerspacer">
+						<div class="emotiontitle text-white">HUNGRY</div>
+						<div id="pichungry" class="emotionpic" ></div>
+						<div class="emotiondesc">
+							<h1 class="greentext emotiondescsubtitle">HAVE MOOD SWINGS HE DOES NOT, HAVE FOOD SWINGS HE DOES.</h1>
+							<p class="emotiondesctext">A growing boy he is! To eat his favorite foods he loves. Check out his favorite foods down below. Yes, hrrrm.</p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="emotionslide headerspacer">
+						<div class="emotiontitle text-white">TIRED</div>
+						<div id="pictired" class="emotionpic" ></div>
+						<div class="emotiondesc">
+							<h1 class="greentext emotiondescsubtitle">TUCKERED OUT HE GETS</h1>
+							<p class="emotiondesctext">Him super sleepy all of the action makes. Energy to crush bad guys, make friends, and have fun, he needs his rest to have.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#emotioncarousel" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#emotioncarousel" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	
+	<!-- Skills -->
+	<div id="skills">
+		<h1 class="headertext headerspacer">THE <span class="greentext">SKILLS</span></h1>
+		
+		<div class="col-xl-4 col-sm-12 skill">
+			<div class="striped text-white">
+				<div class="greencircle rounded-circle"><h1 class="circltext">1</h1></div>
+			</div>
+			<div class="text-center skilltext">
+				<h1>THE FORCE</h1>
+				<p>Long until this small creature achieves jedi master status it won’t be. The original Yoda achieved that rank at the age of 100. Likely to be rapid development from the age of 50 to 100 in the child there is. Yes, hrrrm.</p>
+			</div>
+		</div>
+		<div class="col-xl-4 col-sm-12 skill">
+			<div class="striped text-white">
+				<div class="greencircle rounded-circle"><h1 class="circltext">2</h1></div>
+			</div>
+			<div class="text-center skilltext">
+				<h1>SERIOUS CUTENESS</h1>
+				<p>Helpless in the face of baby Yoda humanity is. Those saucer-size eyes, x-wing ears, adorable enough to melt any heart and three-digit mitts are. Much choice in the matter: science says we’re all programmed to react a certain way when we see the little green guy you don’t even have.</p>
+			</div>
+		</div>
+		<div class="col-xl-4 col-sm-12 skill">
+			<div class="striped text-white">
+				<div class="greencircle rounded-circle"><h1 class="circltext">3</h1></div>
+			</div>
+			<div class="text-center skilltext">
+				<h1>HIDE AND SEEK</h1>
+				<p>Not the fun, hiding for his life aboard the Mandalorian's ship no-high-stakes preschool version though -- baby Yoda is. That when you see how cute he is peeking out from behind machinery but you almost forget. A baby he may be, how to stay alive but he still knows.</p>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Friends -->
+	<div id="friends">
+		<h1 class="headertext headerspacer"><span class="greentext">FRIENDS</span> <span class="graytext"> / </span>FOES</h1>
+		
+		<div id="friendcarousel" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="friendslide headerspacer">
+						<div class="friendcard">
+							<div class="friendcardtext">
+								<p>test</p>
+								<h1></h1>
+							</div>
+						</div>
+						<div class="friendcard">
+							<div class="friendcardtext">
+								<p>test</p>
+								<h1></h1>
+							</div>
+						</div>
+						<div class="friendcard">
+							<div class="friendcardtext">
+								<p>test</p>
+								<h1></h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#friendcarousel" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon invert" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#friendcarousel" role="button" data-slide="next">
+				<span class="carousel-control-next-icon invert" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	
+	<!-- Foods -->
+	<div id="foods">
+		
+		<h1 class="headertext headerspacer"><span class="greentext">FAVORITE</span> FOODS</h1>
+		
+		<div class="col-lg-4 col-sm-12 text-center food">
+			<img src="star.svg" width="45px" />
+			<h1>FROGS</h1>
+			<p>Good for him all frogs are. It doesn't matter if they're deep fried or raw. Them he loves.</p>
+		</div>
+		<div class="col-lg-4 col-sm-12 text-center food">
+			<img src="star.svg" width="45px" />
+			<img src="star.svg" width="45px" />
+			<h1>CUP OF SOUP</h1>
+			<p>All soups he loves, warm frog leg soup but his favorite is. Hmm.</p>
+		</div>
+		<div class="col-lg-4 col-sm-12 text-center food">
+			<img src="star.svg" width="45px" />
+			<img src="star.svg" width="45px" />
+			<img src="star.svg" width="45px" />
+			<h1>CHICKY NUGGIES</h1>
+			<p>His absolute fave especially when it's paired with chocky milk, chicky nuggies are! All chicky nuggies he loves, his number one Popeyes is.</p>
+		</div>
+	</div>
+	
+</body>
+</html>
